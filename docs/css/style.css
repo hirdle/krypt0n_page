@@ -67,7 +67,7 @@ body {
 
 .nav__item:hover {
     color: rgb(33, 100, 225);
-    font-size: 49px;
+    transform: scale(1.3);
 }
 
 @media (max-width: 767px) {
