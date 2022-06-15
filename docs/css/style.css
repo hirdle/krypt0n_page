@@ -73,7 +73,7 @@ body {
 
 .section__card {
     width: -webkit-fill-available;
-    height: fit-content;
+    height: 100%;
     padding: 15px;
     margin: 20px;
     border: 2px solid #4d2da5;
@@ -143,6 +143,8 @@ body {
 }
 
 .control_state__state {
+    text-align: center;
+    width: 95px;
     padding: 8px 16px;
     border-radius: 6px;
     color: #fff;
@@ -161,6 +163,80 @@ body {
 .control_state__state.green {
     background-color: green;
     margin-right: 4px;
+}
+
+.section__card.info {
+    width: 30%;
+}
+.section__card.state {
+    width: 70%;
+}
+
+.popup.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup {
+    font-family: "Roboto";
+    font-weight: 500;
+    transition: .3s;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position:fixed;
+    width:100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    top:0px;
+    left:0px;
+    z-index: 100;
+}
+
+.popup__container {
+    padding: 15px;
+    margin: 0 auto;
+    min-height: 100px;
+    max-width: 360px;
+    height: auto;
+    transition: height .5s;
+    background-color: var(--bkg);
+    width: 100vw;
+    background-color: #fff;
+    border-radius: 16px;
+}
+
+.popup__header {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup__input {
+    width: -webkit-fill-available;
+    margin: 15px;
+    border: 2px solid #000;
+    padding: 7px;
+    border-radius: 15px;
+}
+
+.popup__btn {
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+    
+    margin: 0 auto;
+    display: block;
+    background-color: #6190af67;
+}
+
+@media (min-width: 767px) {
+    .section__card.info, .section__card.state{
+        height: 243px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -183,5 +259,8 @@ body {
     }
     .control_state__name {
         font-size: 17px;
+    }
+    .section__card.info, .section__card.state{
+        width: -webkit-fill-available;
     }
 }

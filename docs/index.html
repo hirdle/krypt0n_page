@@ -10,6 +10,25 @@
     <title>Krypt0n</title>
 </head>
 <body>
+
+    <div class="popup visible">
+        <div class="popup__container">
+            <div class="popup__header">
+
+                <h1>Введите пароль</h1>
+
+                <div class="popup_close_btn">
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g data-name="Layer 2"><g data-name="close"><rect width="24" height="24" transform="rotate(180 12 12)" opacity="0"/><path d="M13.41 12l4.3-4.29a1 1 0 1 0-1.42-1.42L12 10.59l-4.29-4.3a1 1 0 0 0-1.42 1.42l4.3 4.29-4.3 4.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l4.29-4.3 4.29 4.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"/></g></g></svg>
+                </div>
+            </div>
+
+            <input type="text" class="popup__input" placeholder="Пароль">
+
+            <button class="popup__btn">Перезагрузить</button>
+            
+        </div>
+    </div>
+
     <header class="header">
         <div class="container">
             <div class="header__inner">
@@ -34,14 +53,14 @@
     </div>
 
     <div class="block_flex">
-        <div class="section__card" style="width: 30%;">
+        <div class="section__card info">
             <h3>Состояние сервера:</h3>
             <p>Температура сервера - <span class="temperature">°C</span></p>
             <p>Аптайм - <span class="uptime"></span></p>
             <p>CPU: <span class="cpu"></span></p>
         </div>
 
-        <div class="section__card" style="width: 70%;">
+        <div class="section__card state">
             <h3>Состояние приложений:</h3>
 
             <div class="control_state">
